@@ -15,6 +15,7 @@ RUN apt-get install -y nodejs
 ENV CI true
 RUN curl -sf https://up.apex.sh/install | sh
 RUN chmod +x /usr/local/bin/up
+RUN up upgrade
 
 RUN go get github.com/apex/actions/up/cmd/up-wrapper
 
