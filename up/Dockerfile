@@ -12,7 +12,7 @@ LABEL "com.github.actions.color"="white"
 ENV CI true
 RUN curl -sf https://up.apex.sh/install | sh
 RUN chmod +x /usr/local/bin/up
-RUN up upgrade
+RUN /usr/local/bin/up upgrade
 
 RUN go get github.com/apex/actions/up/cmd/up-wrapper
 
