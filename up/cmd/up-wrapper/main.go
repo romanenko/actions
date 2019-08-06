@@ -41,6 +41,15 @@ func main() {
 			}
 		}
 	}
+	
+	// upgrade
+	cmd := exec.Command("up", "upgrade")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	err = cmd.Run()
+	if err != nil {
+		log.Fatalf("error: %s", err)
+	}
 
 	// proxy to up(1)
 	start := time.Now()
