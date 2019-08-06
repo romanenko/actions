@@ -54,7 +54,7 @@ func main() {
 	// proxy to up(1)
 	start := time.Now()
 
-	cmd := exec.Command("up", args...)
+	cmd = exec.Command("up", args...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	err = cmd.Run()
